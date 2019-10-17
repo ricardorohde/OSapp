@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "osapp";
+$route['default_controller'] = "OSapp";
 $route['404_override'] = '';
 
 
