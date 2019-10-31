@@ -2,7 +2,7 @@
     <div class="widget-title">
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#tab1">Dados do Cliente</a></li>
-            <li><a data-toggle="tab" href="#tab2">Ordens de Serviço</a></li>
+            <li><a data-toggle="tab" href="#tab2">Contratos</a></li>
             <div class="buttons">
                     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'eCliente')){
                         echo '<a title="Icon Title" class="btn btn-mini btn-info" href="'.base_url().'index.php/clientes/editar/'.$result->idClientes.'"><i class="icon-pencil icon-white"></i> Editar</a>'; 
@@ -136,17 +136,14 @@
                             <tbody>
 
                                 <tr>
-                                    <td colspan="6">Nenhuma OS Cadastrada</td>
+                                    <td colspan="6">Não ha dados a exibir.</td>
                                 </tr>
                             </tbody>
                         </table>
                 
                 <?php } else { ?>
 
-
-              
-
-                        <table class="table table-bordered ">
+                    <table class="table table-bordered ">
                             <thead>
                                 <tr style="backgroud-color: #2D335B">
                                     <th>#</th>

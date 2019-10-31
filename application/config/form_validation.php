@@ -77,11 +77,6 @@ $config = array('clientes' => array(array(
                                     'rules'=>'required|trim|xss_clean'
                                 ),
                                 array(
-                                    'field'=>'precoCompra',
-                                    'label'=>'Preo de Compra',
-                                    'rules'=>'required|trim|xss_clean'
-                                ),
-                                array(
                                     'field'=>'precoVenda',
                                     'label'=>'Preo de Venda',
                                     'rules'=>'required|trim|xss_clean'

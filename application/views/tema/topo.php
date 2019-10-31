@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ThreeBytes OS</title>
+<title>Map OS</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
@@ -20,7 +20,7 @@
 
 <!--Header-part-->
 <div id="header">
-  <h1><a href="">ThreeBytes OS</a></h1>
+  <h1><a href="">Contratos</a></h1>
 </div>
 <!--close-Header-part--> 
 
@@ -33,7 +33,7 @@
   </ul>
 </div>
 
-<!--start-top-serch-->
+<!--start-top-serch
 <div id="search">
   <form action="<?php echo base_url()?>index.php/mapos/pesquisar">
     <input type="text" name="termo" placeholder="Pesquisar..."/>
@@ -64,9 +64,9 @@
     <?php } ?>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){ ?>
-        <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Ordens de Serviço</span></a></li>
+        <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Contratos</span></a></li>
     <?php } ?>
-
+<!--
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
         <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/vendas"><i class="icon icon-shopping-cart"></i> <span>Vendas</span></a></li>
     <?php } ?>
@@ -110,6 +110,7 @@
             <?php } ?>
             
           </ul>
+            -->
         </li>
 
     <?php } ?>
@@ -168,7 +169,7 @@
 </div>
 <!--Footer-part-->
 <div class="row-fluid">
-  <div id="footer" class="span12"> 2014 &copy; ThreeBytes OS</div>
+  <div id="footer" class="span12"> 2014 &copy; MAP OS</div>
 </div>
 <!--end-Footer-part-->
 

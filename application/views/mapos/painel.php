@@ -20,18 +20,12 @@
             <li class="bg_ly"> <a href="<?php echo base_url()?>index.php/servicos"> <i class="icon-wrench"></i> Serviços</a> </li>
         <?php } ?>
         <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){ ?>
-            <li class="bg_lo"> <a href="<?php echo base_url()?>index.php/os"> <i class="icon-tags"></i> OS</a> </li>
+            <li class="bg_lo"> <a href="<?php echo base_url()?>index.php/os"> <i class="icon-tags"></i> Contratos </a> </li>
         <?php } ?>
-        <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
+<!--        <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
             <li class="bg_ls"> <a href="<?php echo base_url()?>index.php/vendas"><i class="icon-shopping-cart"></i> Vendas</a></li>
         <?php } ?>
-
-        
-        
-        
-        
-        
-
+-->
       </ul>
     </div>
   </div>  
@@ -44,7 +38,7 @@
     <div class="span12">
         
         <div class="widget-box">
-            <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Produtos Com Estoque Mínimo</h5></div>
+            <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Produtos </h5></div>
             <div class="widget-content">
                 <table class="table table-bordered">
                     <thead>
@@ -53,7 +47,6 @@
                             <th>Produto</th>
                             <th>Preço de Venda</th>
                             <th>Estoque</th>
-                            <th>Estoque Mínimo</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -66,7 +59,6 @@
                                 echo '<td>'.$p->descricao.'</td>';
                                 echo '<td>R$ '.$p->precoVenda.'</td>';
                                 echo '<td>'.$p->estoque.'</td>';
-                                echo '<td>'.$p->estoqueMinimo.'</td>';
                                 echo '<td>';
                                 if($this->permission->checkPermission($this->session->userdata('permissao'),'eProduto')){
                                     echo '<a href="'.base_url().'index.php/produtos/editar/'.$p->idProdutos.'" class="btn btn-info"> <i class="icon-pencil" ></i> </a>  '; 
@@ -76,7 +68,7 @@
                             }
                         }
                         else{
-                            echo '<tr><td colspan="3">Nenhum produto com estoque baixo.</td></tr>';
+                            echo '<tr><td colspan="3">Não ha dados para ser exibidos.</td></tr>';
                         }    
 
                         ?>
@@ -89,7 +81,7 @@
     <div class="span12" style="margin-left: 0">
         
         <div class="widget-box">
-            <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Ordens de Serviço Em Aberto</h5></div>
+            <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Contratos em Aberto</h5></div>
             <div class="widget-content">
                 <table class="table table-bordered">
                     <thead>
@@ -119,7 +111,7 @@
                             }
                         }
                         else{
-                            echo '<tr><td colspan="3">Nenhuma OS em aberto.</td></tr>';
+                            echo '<tr><td colspan="3">Não ha dados para ser exibidos..</td></tr>';
                         }    
 
                         ?>
@@ -136,14 +128,14 @@
     <div class="span12">
         
         <div class="widget-box">
-            <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Estatísticas do Sistema</h5></div>
+            <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Quantitativo</h5></div>
             <div class="widget-content">
-                <div class="row-fluid">           
+                <div class="row-fluid">
                     <div class="span12">
                         <ul class="site-stats">
                             <li class="bg_lh"><i class="icon-group"></i> <strong><?php echo $this->db->count_all('clientes');?></strong> <small>Clientes</small></li>
                             <li class="bg_lh"><i class="icon-barcode"></i> <strong><?php echo $this->db->count_all('produtos');?></strong> <small>Produtos </small></li>
-                            <li class="bg_lh"><i class="icon-tags"></i> <strong><?php echo $this->db->count_all('os');?></strong> <small>Ordens de Serviço</small></li>
+                            <li class="bg_lh"><i class="icon-tags"></i> <strong><?php echo $this->db->count_all('os');?></strong> <small>Contratos</small></li>
                             <li class="bg_lh"><i class="icon-wrench"></i> <strong><?php echo $this->db->count_all('servicos');?></strong> <small>Serviços</small></li>
                             
                         </ul>

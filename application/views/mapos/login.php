@@ -3,12 +3,12 @@
 <html lang="pt-br">
     
 <head>
-        <title>ThreeBytes OS</title><meta charset="UTF-8" />
+        <title>Map Os</title><meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap-responsive.min.css" />
         <link rel="stylesheet" href="<?php echo base_url()?>assets/css/matrix-login.css" />
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
         <script src="<?php echo base_url()?>assets/js/jquery-1.10.2.min.js"></script>
     </head>
     <body>
@@ -108,7 +108,7 @@
         <div id="notification" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 id="myModalLabel">ThreeBytes OS</h4>
+            <h4 id="myModalLabel">MapOS</h4>
           </div>
           <div class="modal-body">
             <h5 style="text-align: center">Os dados de acesso estão incorretos, por favor tente novamente!</h5>

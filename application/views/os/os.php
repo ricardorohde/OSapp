@@ -1,5 +1,5 @@
 <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'aOs')){ ?>
-    <a href="<?php echo base_url();?>index.php/os/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Adicionar OS</a>
+    <a href="<?php echo base_url();?>index.php/os/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Adicionar </a>
 <?php } ?>
 
 <?php
@@ -10,7 +10,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-tags"></i>
          </span>
-        <h5>Ordens de Serviço</h5>
+        <h5>Contratos</h5>
 
      </div>
 
@@ -31,7 +31,7 @@ if(!$results){?>
     <tbody>
 
         <tr>
-            <td colspan="6">Nenhuma OS Cadastrada</td>
+            <td colspan="6">Não ha dados para ser exibidos.</td>
         </tr>
     </tbody>
 </table>

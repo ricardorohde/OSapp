@@ -81,14 +81,12 @@
             rules :{
                   descricao: { required: true},
                   unidade: { required: true},
-                  precoCompra: { required: true},
                   precoVenda: { required: true},
                   estoque: { required: true}
             },
             messages:{
                   descricao: { required: 'Campo Requerido.'},
                   unidade: {required: 'Campo Requerido.'},
-                  precoCompra: { required: 'Campo Requerido.'},
                   precoVenda: { required: 'Campo Requerido.'},
                   estoque: { required: 'Campo Requerido.'}
             },

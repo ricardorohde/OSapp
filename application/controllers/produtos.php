@@ -52,7 +52,7 @@ class Produtos extends CI_Controller {
         
         $this->pagination->initialize($config); 	
 
-	    $this->data['results'] = $this->produtos_model->get('produtos','idProdutos,descricao,unidade,precoCompra,precoVenda,estoque,estoqueMinimo','',$config['per_page'],$this->uri->segment(3));
+	    $this->data['results'] = $this->produtos_model->get('produtos','idProdutos,descricao,unidade,precoVenda,estoque,','',$config['per_page'],$this->uri->segment(3));
        
 	    $this->data['view'] = 'produtos/produtos';
        	$this->load->view('tema/topo',$this->data);
@@ -71,16 +71,13 @@ class Produtos extends CI_Controller {
         $this->data['custom_error'] = '';
 
         if ($this->form_validation->run('produtos') == false) {
-            $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
+            $this->data['custom_error'] = (validation_errors() ? '<div class="form_error ">' . validation_errors() . '</div>' : false);
         } else {
-            $precoCompra = $this->input->post('precoCompra');
-            $precoCompra = str_replace(",","", $precoCompra);
             $precoVenda = $this->input->post('precoVenda');
             $precoVenda = str_replace(",", "", $precoVenda);
             $data = array(
                 'descricao' => set_value('descricao'),
                 'unidade' => set_value('unidade'),
-                'precoCompra' => $precoCompra,
                 'precoVenda' => $precoVenda,
                 'estoque' => set_value('estoque'),
                 'estoqueMinimo' => set_value('estoqueMinimo')
@@ -110,17 +107,13 @@ class Produtos extends CI_Controller {
         if ($this->form_validation->run('produtos') == false) {
             $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
         } else {
-            $precoCompra = $this->input->post('precoCompra');
-            $precoCompra = str_replace(",","", $precoCompra);
             $precoVenda = $this->input->post('precoVenda');
             $precoVenda = str_replace(",", "", $precoVenda);
             $data = array(
                 'descricao' => $this->input->post('descricao'),
                 'unidade' => $this->input->post('unidade'),
-                'precoCompra' => $precoCompra,
                 'precoVenda' => $precoVenda,
-                'estoque' => $this->input->post('estoque'),
-                'estoqueMinimo' => $this->input->post('estoqueMinimo')
+                'estoque' => $this->input->post('estoque')
             );
 
             if ($this->produtos_model->edit('produtos', $data, 'idProdutos', $this->input->post('idProdutos')) == TRUE) {
